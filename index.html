@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<title>ProblemSet3.1.pdf</title>
+		<style>body,#a,iframe { margin: 0; padding: 0; } /*iframe { height: 100%; width: 100%; }*/</style>
+	</head>
+	<body>
+		<div id="a"></div>
+		<script>
+		var $_GET = (function(){
+		    var url = window.document.location.href.toString();
+		    var u = url.split("?");
+		    if(typeof(u[1]) == "string"){
+		        u = u[1].split("&");
+		        var get = {};
+		        for(var i in u){
+		            var j = u[i].split("=");
+		            get[j[0]] = j[1];
+		        }
+		        return get;
+		    } else {
+		        return {};
+		    }
+		})();
+		
+		var a=$_GET['u'];
+        var swidth = screen.height;
+        var sheight = screen.width - 97 * (screen.width / 768);
+		document.getElementById("a").innerHTML="<iframe src='"+a+"' frameborder=0 height='"+sheight+"' width='"+swidth+"' scrolling='auto'>";
+	</script>
+	</body>
+</html>
