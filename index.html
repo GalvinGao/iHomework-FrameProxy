@@ -3,6 +3,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
 		<title>ProblemSet3.1.pdf</title>
 		<style>body,#a,iframe { margin: 0; padding: 0; } /*iframe { height: 100%; width: 100%; }*/</style>
+		<base target="_self">
 	</head>
 	<body>
 		<div id="a"></div>
@@ -29,8 +30,8 @@
 		
 		var a=$_GET['u'];
 		
-		if (a.indexOf("u=") < 0) {
-			a = "https://www.baidu.com/"
+		if (document.URL.indexOf("u=") < 0) {
+			a = "https://www.bing.com/"
 		}
 		
         var swidth = screen.height;
